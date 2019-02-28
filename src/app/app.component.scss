@@ -6,7 +6,8 @@ $font-color: #6D7B8D;
 /* NAV BAR */
 .topnav {
   overflow: hidden;
-  border: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   margin: auto;
   width: 80%;
   position: sticky;
@@ -20,18 +21,23 @@ $font-color: #6D7B8D;
     text-decoration: none;
     text-align: center;
 
-    &:hover:not(.active-link) {
+    &:hover:not(.active-link):not(.logo) {
       color: black;
+      transition: color 0.8s;
     }
 
     &.active-link {
       color: black;
     }
 
-  }
+    &.logo{
+        float: left;
+        cursor: default;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: bolder;
+    }
 
-  .logo {
-    float: left;
   }
 
 }
@@ -39,4 +45,5 @@ $font-color: #6D7B8D;
 h1 {
   color: $font-color;
   text-align: center;
+  cursor: default;
 }
