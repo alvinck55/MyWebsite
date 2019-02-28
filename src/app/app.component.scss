@@ -1,25 +1,42 @@
+/* VARIABLES */
+$nav-bar-selected-color: #98AFC7;
+$border-color: #e7e7e7;
+$font-color: #6D7B8D;
+
 /* NAV BAR */
 .topnav {
   overflow: hidden;
-  background-color: #f1f1f1;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $border-color;
+  margin: auto;
+  width: 80%;
+  position: sticky;
+  top: 0;
+  background-color: white;
 
   a {
-    float: left;
-    color: #6D7B8D;
+    float: right;
+    color: $font-color;
     padding: 14px 16px;
     text-decoration: none;
     text-align: center;
+
+    &:hover:not(.active-link) {
+      color: black;
+    }
+
+    &.active-link {
+      color: black;
+    }
+
   }
 
-  a:hover:not(.active) {
-    background-color: #98AFC7;
-    color: white;
+  .logo {
+    float: left;
   }
 
-  a.active {
-      background-color: #98AFC7;
-      color: white;
-  }
+}
 
+h1 {
+  color: $font-color;
+  text-align: center;
 }
