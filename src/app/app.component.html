@@ -1,7 +1,11 @@
 
+<h1>{{title}}</h1>
 <div class="topnav">
-  <a class="active" routerLink="">Home</a>
-  <a routerLink="about">About</a>
+  <a class="logo">{{title}}</a>
+  <a routerLink="about" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">About</a>
+  <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
 </div>
 
+<div class="content">
 <router-outlet></router-outlet>
+</div>
