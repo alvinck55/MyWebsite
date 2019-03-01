@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Alvin Keyser';
+  title: string = 'Alvin Keyser';
+  linkedin_icon_path: string = '/assets/img/linkedin-icon.png';
+  github_icon_path: string = '/assets/img/github-icon.png';
 }

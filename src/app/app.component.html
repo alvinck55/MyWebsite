@@ -1,10 +1,22 @@
-
-<h1>{{title}}</h1>
-<div class="topnav">
-  <a class="logo">{{title}}</a>
-  <a routerLink="projects" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Projects</a>
-  <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
+<div class="container-top">
+  <div class="header">
+  {{title}}
+  </div>
 </div>
+<div class="container-topnav">
+  <div class="topnav">
+    <a class="logo">{{title}}</a>
+    <a class="media-icon" href="https://www.linkedin.com/in/alvin-keyser/">
+    <img class="media-icon-resize" [src]="linkedin_icon_path" alt="linkedin-icon">
+    </a>
+    <a class="media-icon" href="https://github.com/alvinck55/">
+      <img class="media-icon-resize" [src]="github_icon_path" alt="github-icon">
+    </a>
+    <a routerLink="projects" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Projects</a>
+    <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  </div>
+</div>
+
 
 <div class="content">
 <router-outlet></router-outlet>
